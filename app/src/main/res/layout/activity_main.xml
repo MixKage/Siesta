@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+<!--место 2 зоны-->
+    <RelativeLayout
+        android:id="@+id/panel"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="250dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        android:elevation="0.1dp">
+
+        <TextView
+            android:id="@+id/panelText"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:text="настройки"
+            android:textSize="30sp"
+            android:alpha="0" />
+
+        <ImageView
+            android:id="@+id/compassIcon"
+            android:layout_width="40dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="20dp"
+            android:gravity="center_vertical"
+            android:src="@drawable/compas"
+            android:alpha="0.7" />
+    </RelativeLayout>
+
+<!--здесь будут храниться 1 и 3 зона-->
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/scrollLinearLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/theBigText"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:autoSizeTextType="uniform"
+                android:gravity="center"
+                android:paddingHorizontal="50dp"
+                android:paddingTop="100dp"
+                android:paddingBottom="30dp"
+                android:text="Настройки"
+                android:textStyle="bold"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="80dp" />
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
